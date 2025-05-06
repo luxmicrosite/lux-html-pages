@@ -19,7 +19,8 @@
       display: flex;
       max-width: 1200px;
       margin: 2em auto;
-      padding: 1em;
+      height: 100vh; /* required for internal scroll */
+      overflow: hidden;
     }
 
     .main-content {
@@ -29,11 +30,9 @@
     }
 
     .sidebar {
-      width: 250px;
-      flex-shrink: 0;
-      position: sticky;
-      top: 4em;
-      align-self: flex-start;
+    width: 250px;
+      overflow-y: auto;
+      height: 100vh;
       padding-left: 1em;
       border-left: 1px solid #ccc;
       font-size: 10pt;
